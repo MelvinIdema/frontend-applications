@@ -11,4 +11,6 @@ kon ik dat project niet meer vinden. Dus het wordt uit m'n hoofd
 het project structureren.
 
 Ik weet nog dat we styled-components gebruikte, dus dat is dan
-ook wat ik in dit project wil gebruiken. 
+ook wat ik in dit project wil gebruiken. Styled-Components raad
+aan om een babel plugin te gebruiken. Hiervoor moest ik wel
+CRA "ejecten".
