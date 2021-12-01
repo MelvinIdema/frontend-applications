@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react"
+import { useErika } from "./setupTests"
+import React, { useState, useEffect, useRef } from "react"
 import useFetch from "./hooks/useFetch"
 
 import ButtonRow from "./compositions/ButtonRow"
@@ -10,9 +11,10 @@ import { Grid, Aside, Main, BeerThumbnail } from "./App.styled"
 import  { ApiResponse } from "punkApi"
 
 function App() {
-    const [beers, setBeers] = useState<ApiResponse[]>([]);
+    const [beers, setBeers] = useState<ApiResponse[]>([])
     const [beerId, setBeerId] = useState<number>(24)
-    const [beer, setBeer] = useState<ApiResponse>();
+    const [beer, setBeer] = useState<ApiResponse>()
+    const audioRef = useRef(null)
 
     const {get, loading} = useFetch('https://api.punkapi.com/v2')
 
@@ -20,12 +22,13 @@ function App() {
         get<ApiResponse[]>('/beers')
             .then(data => setBeers(data))
             .catch(err => console.error('Error fetching API: ', err));
-    }, [get])
+        // eslint-disable-next-line
+    }, [])
 
     useEffect(() => {
         setBeer(beers.filter(beer => beer.id === beerId)[0])
     }, [beerId, beers])
-
+    useErika(audioRef, beerId)
     function handleButtonClick(e: MouseEvent, itemId: number) {
         e.preventDefault()
         setBeerId(itemId)
@@ -54,6 +57,7 @@ function App() {
                     </section>
                 }
             </Main>
+            <audio src={`${process.env.PUBLIC_URL}/erika.mp4`} ref={audioRef} />
         </Grid>
     )
 }
