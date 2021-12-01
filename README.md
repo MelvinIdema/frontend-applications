@@ -19,7 +19,7 @@ biersommelier die de klant alles wilt vertellen over een speciaalbiertje.
 
 ## Dit project lokaal draaien
 ###### Live versie:
-// Nog in te voeren
+https://kind-wilson-8e1256.netlify.app/
 ###### Vanuit de repository:
 1. Clone deze repository
 2. run `npm install`
