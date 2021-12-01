@@ -2,6 +2,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/746ff344-8551-4ec7-a826-7a3e10bc05b5/deploy-status)](https://app.netlify.com/sites/kind-wilson-8e1256/deploys)
 ![Issues](https://img.shields.io/github/issues/melvinidema/frontend-applications)
 ![ts](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
+![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)
 
 **Het Bierdashboard** is een applicatie dat informatie
 over een biertje kan weergeven. Superhandig voor bijvoorbeeld een
