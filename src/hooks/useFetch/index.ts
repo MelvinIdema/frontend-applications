@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function useFetch(baseUrl) {
+export default function useFetch(baseUrl: string) {
     const [loading, setLoading] = useState(true);
 
-    function get(url) {
-        return new Promise((resolve, reject) => {
+    function get<S>(url: string) {
+        return new Promise<S>((resolve, reject) => {
             fetch(baseUrl + url)
                 .then(response => response.json())
                 .then(data => {
@@ -22,7 +22,7 @@ export default function useFetch(baseUrl) {
         });
     }
 
-    function post(url, body) {
+    function post(url: string, body: {}) {
         return new Promise((resolve, reject) => {
             fetch(baseUrl + url, {
                 method: "post",

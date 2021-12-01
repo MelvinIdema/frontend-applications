@@ -58,8 +58,8 @@ standaard stories map verwijderd en de volgende mappenstructuur aangehouden:
 
 Voor componenten:
 
-`components/Component/index.js // Voor het component`
-`components/Component/index.stories.js // Voor de bijbehorende story`
-`components/Component/index.styled.js // Voor styled-components`
+`components/Component/index.tsx // Voor het component`
+`components/Component/index.stories.tsx // Voor de bijbehorende story`
+`components/Component/style.ts // Voor styled-components`
 
 ## Dag 3
