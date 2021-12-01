@@ -57,7 +57,7 @@ function App() {
                     </section>
                 }
             </Main>
-            <audio src={`${process.env.PUBLIC_URL}/erika.mp4`} ref={audioRef} />
+            <audio src={`erika.mp4`} ref={audioRef} />
         </Grid>
     )
 }
