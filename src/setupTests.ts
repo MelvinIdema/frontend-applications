@@ -3,7 +3,6 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import {RefObject, useEffect, useState} from "react"
-import {ApiResponse} from "punkApi";
 // import '@testing-library/jest-dom'
 
 export function useErika(audioRef: RefObject<HTMLAudioElement>, currentBeer: number) {
